@@ -18,7 +18,7 @@ export default function Homepage() {
           You travel the world.
           <br />
 <<<<<<< HEAD
-          WorldWise keeps track of your adventures.
+          WanderTrack keeps track of your adventures.
 =======
           WanderTrack keeps track of your adventures.
 >>>>>>> 04b9134b05de2fbf126ba17a93fb22e1afedd3ff
