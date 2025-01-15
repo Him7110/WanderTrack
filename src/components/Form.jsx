@@ -1,5 +1,6 @@
 // "https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=0&longitude=0"
 
+<<<<<<< HEAD
 import { useEffect, useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
@@ -13,6 +14,11 @@ import Message from "./Message";
 import Spinner from "./Spinner";
 import { useCities } from "../contexts/CitiesContext";
 import { useNavigate } from "react-router-dom";
+=======
+import { useState } from "react";
+
+import styles from "./Form.module.css";
+>>>>>>> 04b9134b05de2fbf126ba17a93fb22e1afedd3ff
 
 export function convertToEmoji(countryCode) {
   const codePoints = countryCode
@@ -22,6 +28,7 @@ export function convertToEmoji(countryCode) {
   return String.fromCodePoint(...codePoints);
 }
 
+<<<<<<< HEAD
 const BASE_URL = "https://api.bigdatacloud.net/data/reverse-geocode-client";
 
 function Form() {
@@ -30,10 +37,14 @@ function Form() {
   const navigate = useNavigate();
 
   const [isLoadingGeocoding, setIsLoadingGeocoding] = useState(false);
+=======
+function Form() {
+>>>>>>> 04b9134b05de2fbf126ba17a93fb22e1afedd3ff
   const [cityName, setCityName] = useState("");
   const [country, setCountry] = useState("");
   const [date, setDate] = useState(new Date());
   const [notes, setNotes] = useState("");
+<<<<<<< HEAD
   const [emoji, setEmoji] = useState("");
   const [geocodingError, setGeocodingError] = useState("");
 
@@ -101,6 +112,11 @@ function Form() {
       className={`${styles.form} ${isLoading ? styles.loading : ""}`}
       onSubmit={handleSubmit}
     >
+=======
+
+  return (
+    <form className={styles.form}>
+>>>>>>> 04b9134b05de2fbf126ba17a93fb22e1afedd3ff
       <div className={styles.row}>
         <label htmlFor="cityName">City name</label>
         <input
@@ -108,17 +124,28 @@ function Form() {
           onChange={(e) => setCityName(e.target.value)}
           value={cityName}
         />
+<<<<<<< HEAD
         <span className={styles.flag}>{emoji}</span>
+=======
+        {/* <span className={styles.flag}>{emoji}</span> */}
+>>>>>>> 04b9134b05de2fbf126ba17a93fb22e1afedd3ff
       </div>
 
       <div className={styles.row}>
         <label htmlFor="date">When did you go to {cityName}?</label>
+<<<<<<< HEAD
 
         <DatePicker
           id="date"
           onChange={(date) => setDate(date)}
           selected={date}
           dateFormat="dd/MM/yyyy"
+=======
+        <input
+          id="date"
+          onChange={(e) => setDate(e.target.value)}
+          value={date}
+>>>>>>> 04b9134b05de2fbf126ba17a93fb22e1afedd3ff
         />
       </div>
 
@@ -132,8 +159,13 @@ function Form() {
       </div>
 
       <div className={styles.buttons}>
+<<<<<<< HEAD
         <Button type="primary">Add</Button>
         <BackButton />
+=======
+        <button>Add</button>
+        <button>&larr; Back</button>
+>>>>>>> 04b9134b05de2fbf126ba17a93fb22e1afedd3ff
       </div>
     </form>
   );

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { lazy, Suspense } from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
@@ -63,3 +64,26 @@ function App() {
 }
 
 export default App;
+=======
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+import Product from "./pages/Product";
+import Pricing from "./pages/Pricing";
+import Homepage from "./pages/Homepage";
+import PageNotFound from "./pages/PageNotFound";
+
+function App() {
+  
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="product" element={<Product />} />
+        <Route path="pricing" element={<Pricing />} />
+        <Route path="*" element={<PageNotFound />} />
+      </Routes>
+    </BrowserRouter>
+  );
+}
+
+export default App
+>>>>>>> 04b9134b05de2fbf126ba17a93fb22e1afedd3ff

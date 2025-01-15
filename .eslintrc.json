@@ -1,3 +1,8 @@
 {
+<<<<<<< HEAD
   "extends": "react-app"
 }
+=======
+    "extends": "react-app"
+}
+>>>>>>> 04b9134b05de2fbf126ba17a93fb22e1afedd3ff
